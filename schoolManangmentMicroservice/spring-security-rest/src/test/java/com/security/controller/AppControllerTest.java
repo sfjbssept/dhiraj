@@ -3,7 +3,10 @@ package com.security.controller;
 import static org.assertj.core.api.Assertions.catchException;
 import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.matches;
+import static org.mockito.Mockito.RETURNS_SMART_NULLS;
 import static org.mockito.Mockito.reset;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -17,6 +20,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -69,8 +73,6 @@ public class AppControllerTest {
 
 	}
 
-	
-
 	@Test
 	public void testEmployeePost() throws Exception {
 		Employee employee = createEmployee("test", "dev");
@@ -90,6 +92,18 @@ public class AppControllerTest {
 	private Employee createEmployee(String string1, String String2) {
 		return null;
 	}
+	
+	private String asJsonString(final Object object) {
+		try {
+			final ObjectMapper objectMapper= new ObjectMapper();
+			final String jsonContent=objectMapper.writeValueAsString(object);
+			return jsonContent;
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			throw new RuntimeException(e);
+		}
+	}
 
 	private ResultActions processApiRequest(String api, HttpMethod methodType, String name, Employee employee,
 			String username, String password) {
@@ -98,8 +112,11 @@ public class AppControllerTest {
 		try {
 			switch (methodType) {
 			case GET:
-				response = mockMvc.perform(get(api).header(HttpHeaders.AUTHORIZATION, secret));
+				response = mockMvc.perform(get(api).header(HttpHeaders.AUTHORIZATION,secret));
 				break;
+			case POST:
+				response = mockMvc.perform(get(api).header(HttpHeaders.AUTHORIZATION,secret).contentType(MediaType.APPLICATION_JSON)
+						.content(asJsonString(employee)).accept(MediaType.APPLICATION_JSON));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

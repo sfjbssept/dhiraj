@@ -52,5 +52,5 @@ public class MessagingConfig {
 		return rabbitTemplate;
 		
 		}
-}
+} 	
 

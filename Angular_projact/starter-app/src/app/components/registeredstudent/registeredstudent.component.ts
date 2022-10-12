@@ -9,6 +9,14 @@ import { StudentsService } from 'src/app/Services/students.service';
 })
 export class RegisteredstudentComponent implements OnInit {
   students: Student[] = [];
+ title = " List of Registered-Students"
+  deleteStudent(student, index) {
+    const observable = this.studentService.deleteStudent(student);
+    observable.subscribe((response: any) => {
+      console.log(response);
+      this.students.splice(index, 1);
+    });
+  }
 
   constructor(private studentService: StudentsService) {}
 

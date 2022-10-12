@@ -1,47 +1,22 @@
 {
   "students": [
     {
-      "firstname": "Ram",
-      "lastname": "Kumar",
+      "firstname": " Roshan",
+      "lastname": "Kadam",
+      "age": 22,
       "class": 12,
-      "age": 15,
-      "id": 1
+      "subject": "Commerce",
+      "gender": "Male",
+      "id": 6
     },
     {
-      "firstname": " nishant",
-      "lastname": "gupta",
-      "age": 32,
+      "firstname": "Prachi",
+      "lastname": "Singh",
+      "age": 22,
       "class": 12,
       "subject": "PCM",
-      "gender": "Male",
-      "id": 2
-    },
-    {
-      "firstname": " Vishal",
-      "lastname": "Kumar",
-      "age": 31,
-      "class": 12,
-      "subject": "PCMB",
-      "gender": "Male",
-      "id": 3
-    },
-    {
-      "firstname": " Vishal",
-      "lastname": "Kumar",
-      "age": 31,
-      "class": 12,
-      "subject": "PCMB",
-      "gender": "Male",
-      "id": 4
-    },
-    {
-      "firstname": " Aman",
-      "lastname": "Kumar",
-      "age": 21,
-      "class": 11,
-      "subject": "PCM",
-      "gender": "Male",
-      "id": 5
+      "gender": "Female",
+      "id": 7
     }
   ]
 }

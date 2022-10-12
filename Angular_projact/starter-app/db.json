@@ -1,0 +1,47 @@
+{
+  "students": [
+    {
+      "firstname": "Ram",
+      "lastname": "Kumar",
+      "class": 12,
+      "age": 15,
+      "id": 1
+    },
+    {
+      "firstname": " nishant",
+      "lastname": "gupta",
+      "age": 32,
+      "class": 12,
+      "subject": "PCM",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "firstname": " Vishal",
+      "lastname": "Kumar",
+      "age": 31,
+      "class": 12,
+      "subject": "PCMB",
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "firstname": " Vishal",
+      "lastname": "Kumar",
+      "age": 31,
+      "class": 12,
+      "subject": "PCMB",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "firstname": " Aman",
+      "lastname": "Kumar",
+      "age": 21,
+      "class": 11,
+      "subject": "PCM",
+      "gender": "Male",
+      "id": 5
+    }
+  ]
+}

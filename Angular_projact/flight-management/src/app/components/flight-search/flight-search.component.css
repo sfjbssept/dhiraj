@@ -1,0 +1,20 @@
+.no-style .ng-valid {
+    border-left: 1px  solid #CCC
+  }
+  
+    .no-style .ng-invalid {
+    border-left: 1px  solid #CCC
+  }
+  
+  div.picture1 {
+    width:50%; /*width of your image*/
+    height:50%; /*height of your image*/
+    background-image:url('src/assets/images/images.jfif');
+    margin:0; /* If you want no margin */
+    padding:0; /*if your want to padding */
+ }
+
+ #startDate, #startTime {
+    width: 50%;  
+    float: left;
+}

@@ -7,13 +7,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserRagistrationComponent } from './components/user-ragistration/user-ragistration.component';
 import { FlightSearchComponent } from './components/flight-search/flight-search.component';
 import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     UserRagistrationComponent,
-    FlightSearchComponent
+    FlightSearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

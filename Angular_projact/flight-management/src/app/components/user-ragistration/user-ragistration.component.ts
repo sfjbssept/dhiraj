@@ -18,4 +18,7 @@ export class UserRagistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveUser(){
+    
+  }
 }
